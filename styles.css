@@ -164,7 +164,7 @@ footer {
     position: absolute;
     width: 70px;
     height: 70px;
-    background: url('/MOEDA\ DESFOCADA.png') no-repeat center center;
+    background: url('/MOEDADESFOCADA.png') no-repeat center center;
     background-size: contain;
     z-index: -1;
     animation: moveCoin 10s linear infinite;
