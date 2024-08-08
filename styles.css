@@ -1,0 +1,227 @@
+/* Ajustes gerais para responsividade */
+body {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background: url('/FUNDO.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Adicionado para evitar rolagem horizontal */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.headline-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.text-section {
+    text-align: left;
+    margin-right: 20px;
+    max-width: 60%;
+    flex: 1;
+}
+
+.logo {
+    width: 350px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+}
+
+.headline {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.subheadline {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.cta-button {
+    background-color: #d231f4;
+    color: black;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos específicos para o botão de suporte no WhatsApp */
+.whatsapp-cta-button {
+    background-color: #25D366; /* Fundo verde do WhatsApp */
+    color: white; /* Texto branco */
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.whatsapp-cta-button:hover {
+    background-color: #128C7E; /* Fundo verde escuro ao passar o mouse */
+}
+
+.woman-phone {
+    width: 800px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 20px 0;
+    flex: 1;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact p {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.floating-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.floating-whatsapp img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.floating-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+.coin {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url('/MOEDA\ DESFOCADA.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+    animation: moveCoin 10s linear infinite;
+}
+
+@keyframes moveCoin {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+    100% { transform: translateY(0); }
+}
+
+.coin1 { top: 5%; left: 5%; }
+.coin2 { top: 5%; left: 85%; }
+.coin3 { top: 15%; left: 25%; }
+.coin4 { top: 15%; left: 75%; }
+.coin5 { top: 25%; left: 15%; }
+.coin6 { top: 25%; left: 85%; }
+.coin7 { top: 35%; left: 10%; }
+.coin8 { top: 35%; left: 90%; }
+.coin9 { top: 45%; left: 5%; }
+.coin10 { top: 45%; left: 95%; }
+.coin11 { top: 55%; left: 25%; }
+.coin12 { top: 55%; left: 75%; }
+
+@media (max-width: 768px) {
+    .headline-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .woman-phone {
+        width: 80%;
+        margin: 20px 0;
+    }
+    .text-section {
+        max-width: 100%;
+        text-align: center;
+    }
+    .logo {
+        width: 70%; /* Ajusta o tamanho da logo */
+        margin-left: 10%; /* Move a logo um pouco para a esquerda */
+    }
+    .cta-button {
+        font-size: 1.2em;
+        padding: 15px 30px;
+    }
+    .whatsapp-cta-button {
+        width: 70%; /* Ajusta a largura do botão no mobile */
+        margin: 20px auto; /* Centraliza o botão */
+        font-size: 1.2em;
+        padding: 15px 30px;
+        margin-right: 25px;
+    }
+    .floating-whatsapp {
+        width: 60px; /* Ajuste o tamanho do botão flutuante no mobile */
+        height: 60px;
+        bottom: 10px; /* Ajuste a posição no mobile */
+        right: 10px;
+        padding: 5px;
+    }
+}
